@@ -7,7 +7,7 @@ function Footer(){
 
         <footer>
             <p>
-                [Francesca Porrotoyos - Segundo Ustariz - Valentin Ulloa]
+                [Ignacio Skinner - Valentin Ulloa]
                 Programacion III - Proyecto Integrador
             </p>
 
