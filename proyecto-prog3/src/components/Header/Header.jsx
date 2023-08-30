@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './Header.css'
+import '../Header/header.css'
 
 
     function Header (){
@@ -8,11 +8,11 @@ import './Header.css'
         return(
 
             <header className='navbar'>
-                <Link to = '/'><img className='logo' src='/logofiz.png' alt=''/></Link>
+                <Link to = '/'><img className='logo' src='/logofiz.png' alt=''/></Link> CAMBIAR EL SCR LOGO!!!!!
                     <ul>
-                        <li> <Link to = "/">Home</Link></li>
+                        <li> <Link exact={true} to = "/">Home</Link></li>
                         <li> <Link to = "/Favoritos">Favoritos</Link></li>
-                        <li> <Link to = "/VerMas">Ver Todas</Link></li>
+                        <li> <Link exact={true} to = "/VerMas">Ver Todas</Link></li>
                     </ul>
             </header>
         )
