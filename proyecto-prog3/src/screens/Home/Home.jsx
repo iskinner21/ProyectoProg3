@@ -1,4 +1,3 @@
-
 import React from 'react'
 import "./home.css" 
 import Movie from "../../components/Movie/Movie"
@@ -16,4 +15,4 @@ function Home(){
     )
 }
 
-
+export default Home
