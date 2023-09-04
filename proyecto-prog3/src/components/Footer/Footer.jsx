@@ -7,7 +7,8 @@ function Footer(){
 
         <footer>
             <p>
-                [Ignacio Skinner - Valentin Ulloa] - Programacion III - Proyecto Integrador
+                [Ignacio Skinner - Valentin Ulloa] 
+                Programacion III - Proyecto Integrador
             </p>
 
         </footer>

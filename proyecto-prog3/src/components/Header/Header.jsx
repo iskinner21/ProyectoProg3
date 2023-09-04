@@ -8,10 +8,10 @@ import '../Header/header.css'
         return(
 
             <header className='navbar'>
-                <Link to = '/'><img className='logo' src='/logofiz.png' alt=''/></Link> CAMBIAR EL SCR LOGO!!!!!
+                <Link to = '/'><img className='logo' src='./assets/VIMoviesLogo.png' alt=''/></Link> 
                     <ul>
                         <li> <Link exact={true} to = "/">Home</Link></li>
-                        <li> <Link to = "/Favoritos">Favoritos</Link></li>
+                        
                         <li> <Link exact={true} to = "/VerMas">Ver Todas</Link></li>
                     </ul>
             </header>
