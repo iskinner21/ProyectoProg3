@@ -2,6 +2,7 @@
 import React, { Component } from "react"
 import CardPopular from "../CardPopular/CardPopular"
 import CardTopRated from '../CardTopRated/CardTopRated'
+import { Link } from 'react-router-dom';
 
 let urlPopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=5ebefc19996563757d8045ae273d5a4b&language=en-US&page=1";
 let urlTopRatedMovies = "https://api.themoviedb.org/3/movie/top_rated?api_key=5ebefc19996563757d8045ae273d5a4b";
@@ -41,20 +42,26 @@ class Movie extends Component {
 
     render() {
         return (
-            <><h1>Most Popular Movies</h1>
-                <section>
+            <>
+            <h1>Most Popular Movies</h1>
+            <section>
                     {
                         this.state.popularArray.map((unaPelicula, idx) => <CardPopular key={unaPelicula.name + idx} dataPop={unaPelicula} />)
                     }
-                </section>
-                <h1>Top Rated Movies</h1>
-                <section>
+            </section>
+            <div className='padreBoton'>
+                    <Link to='/VerTodasPop' className='boton'> <button>View All Popular Movies</button></Link>
+            </div>
+            <h1>Top Rated Movies</h1>
+            <section>
                     {
                         this.state.topArray.map((unaPelicula, idx) => <CardTopRated key={unaPelicula.name + idx} dataTop={unaPelicula} />)
                     }
-
-                </section></>
-
+            </section>
+            <div className='padreBoton'>
+                <Link to='/VerTodasTop' className='boton'> <button>View All Top Rated Movies</button></Link>
+            </div>
+            </>
 
 
 

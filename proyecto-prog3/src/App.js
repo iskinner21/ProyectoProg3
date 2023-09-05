@@ -5,7 +5,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import Home from './screens/Home/Home';
-import VerTodas from './screens/VerTodas/VerTodas';
+import VerTodasPop from './screens/VerTodasPop/VerTodasPop';
+import VerTodasTop from './screens/VerTodasTop/VerTodasTop';
 
 
 
@@ -17,7 +18,8 @@ function App() {
       <main>
         <Switch>
          <Route exact path="/" component={Home} />
-         <Route exact path="/" component={VerTodas} />
+         <Route exact path="/VerTodasPop" component={VerTodasPop} />
+         <Route exact path='/VerTodasTop' component={VerTodasTop} />
          <Route component={NotFound} />
         </Switch>
       </main>
