@@ -8,58 +8,61 @@ let urlTopRatedMovies = "https://api.themoviedb.org/3/movie/top_rated?api_key=5e
 
 class Movie extends Component {
 
-    constructor(){
+    constructor() {
         super()
-            this.state ={
-                popularArray: [],
-                topArray: []
-            }
+        this.state = {
+            popularArray: [],
+            topArray: []
+        }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         //Primer fetch, aca buscamos de populares
 
         fetch(urlPopularMovies)
-        .then(res => res.json() )
-        .then(data => this.setState({
-            popularArray: data.results 
-        }))
-        .catch()
+            .then(res => res.json())
+            .then(data => {
+                this.setState({
+                popularArray: data.results.slice(0,5)
+                })
+            }
+        )
+            .catch()
 
 
         fetch(urlTopRatedMovies)
-        .then(res => res.json() )
-        .then(data => this.setState({
-            topArray: data.results 
-        }))
-        .catch()
+            .then(res => res.json())
+            .then(data => this.setState({
+                topArray: data.results.slice(0,5)
+            }))
+            .catch()
 
     }
 
-render(){
-    return(
-        <ReactFragment>
-            <h1>Most Popular Movies</h1>
-            <section>
-                {
-                this.state.popularArray.map((unaPelicula, idx)=> <CardPopular key={unaPelicula.name + idx}dataPop={unaPelicula}/>)
-                }
-            </section>
-            <h1>Top Rated Movies</h1>
-            <section>
-                {
-                this.state.topArray.map((unaPelicula, idx)=> <CardTopRated key={unaPelicula.name + idx}dataTop={unaPelicula}/>)
-                }
-                
-            </section>
-        </ReactFragment>
-        
+    render() {
+        return (
+            <><h1>Most Popular Movies</h1>
+                <section>
+                    {
+                        this.state.popularArray.map((unaPelicula, idx) => <CardPopular key={unaPelicula.name + idx} dataPop={unaPelicula} />)
+                    }
+                </section>
+                <h1>Top Rated Movies</h1>
+                <section>
+                    {
+                        this.state.topArray.map((unaPelicula, idx) => <CardTopRated key={unaPelicula.name + idx} dataTop={unaPelicula} />)
+                    }
+
+                </section></>
 
 
 
 
-    )
-}
+
+
+
+        )
+    }
 
 }
 
