@@ -1,0 +1,41 @@
+main {
+    background-image: url(../../assets/Background.jpeg);
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h2 {
+    color: lightgoldenrodyellow;
+}
+
+h1 {
+    color: peru;
+    text-align: center;
+}
+
+.padre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+img {
+    align-self: center;
+}
+
+.seriesH1 {
+    padding-top: 35px;
+}
+
+button {
+    background-image: url(../../assets/Background.jpeg);
+    color: white;
+}

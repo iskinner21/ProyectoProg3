@@ -8,7 +8,7 @@ import '../Header/header.css'
         return(
 
             <header className='navbar'>
-                <Link to = '/'><img className='logo' src='./assets/VIMoviesLogo.png' alt=''/></Link> 
+                <Link to = '/'><img className='logo' src='../../assets/VIMoviesLogo.jpg' alt='img'/></Link> 
                     <ul>
                         <li> <Link exact={true} to = "/">Home</Link></li>
                         <li><Link to="/favorites"> Favorites </Link> </li>

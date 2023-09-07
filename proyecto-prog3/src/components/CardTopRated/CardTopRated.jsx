@@ -12,6 +12,54 @@ class CardTopRated extends Component {
         }
     }
 
+    componentDidMount(){
+        let storage = localStorage.getItem('favoritos')
+        let storageAArray = JSON.parse(storage)
+
+        if(storageAArray !== null){
+            let estaEnElArray = storageAArray.includes(this.props.datosPelicula.id)
+            if(estaEnElArray){
+                this.setState({
+                    esFavorito:true
+                })
+            }
+        }
+    }
+
+    agregarFav(id){
+        let storage = localStorage.getItem('favoritos')
+        
+        if(storage === null){
+          let idEnArray = [id]
+          let arrayAString = JSON.stringify(idEnArray)
+          localStorage.setItem('favoritos', arrayAString)
+        }
+        
+        else {
+          let deStringAArray = JSON.parse(storage)
+          deStringAArray.push(id)
+          let arrayAString = JSON.stringify(deStringAArray)
+          localStorage.setItem('favoritos', arrayAString)
+        }
+        this.setState({
+            esFavorito: true
+        })
+    }
+
+    sacarFav(id){
+       let storage = localStorage.getItem('favoritos')
+       let storageAArray = JSON.parse(storage)
+       let filtro = storageAArray.filter((elm)=> elm !== id)
+       let filtroAString = JSON.stringify(filtro)
+       localStorage.setItem('favoritos', filtroAString)
+
+
+       this.setState({
+        esFavorito:false
+       })
+
+        }
+
     cambiarTexto() {
         if (this.state.descripcion === "Ver Mas") {
             this.setState({
@@ -28,12 +76,31 @@ class CardTopRated extends Component {
 
 render() {
     return(
-        <><article>
+        <>
+        <div className="padre">
+            <article>
                 <h2>{this.props.dataTop.title}</h2>
-                <img src={`https://image.tmdb.org/t/p/w342/${this.props.dataTop.poster_path}`}/>
-                <Link to = {`/movies/detalle/id/${this.props.dataTop.id}`}><button>Ir a detalle</button></Link>
+                <img src={`https://image.tmdb.org/t/p/w342/${this.props.dataTop.poster_path}`} alt='img'/>
+                <br></br>
+                <Link to = {`/movies/detalle/id/${this.props.dataTop.id}`}><button><p>Ir a detalle</p></button></Link>
+                <br></br>
                 <a className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</a>
-            </article></>
+                <p className={this.state.clase}>{this.props.dataTop.overview}</p>
+                <br></br>
+                {
+                    this.state.esFavorito ?
+
+                    <button onClick={()=> this.sacarFav(this.props.datosPelicula.id)}><p>Eliminar de Favoritos</p></button>
+
+                    :
+
+                    <button onClick={()=> this.agregarFav(this.props.datosPelicula.id)}><p>Agregar a favoritos</p></button>
+
+                }
+            </article>
+        </div>
+            </>
+        
             
         
             

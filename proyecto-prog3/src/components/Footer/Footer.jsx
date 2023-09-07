@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import "../Footer/footer.css"
 
 function Footer(){
@@ -6,10 +6,10 @@ function Footer(){
     return(
 
         <footer>
-            <p>
-                [Ignacio Skinner - Valentin Ulloa] 
-                Programacion III - Proyecto Integrador
-            </p>
+            
+            <p className='names'>[Ignacio Skinner - Valentin Ulloa]
+            <br></br>
+            Proyecto Integrador</p>
 
         </footer>
     )

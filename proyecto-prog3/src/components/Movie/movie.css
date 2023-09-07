@@ -1,0 +1,31 @@
+.botonFav {
+    color: darkred;
+}
+
+img {
+    width: 190px;
+    height: 190px;
+}
+
+.padre {
+    text-align: center;
+}
+
+.contenedorPadre {
+    display: flexbox;
+}
+
+.padreBoton {
+    display: flex;
+    justify-content: center;
+    /* padding: 50px; */
+}
+
+.boton {
+    align-items: center;
+}
+
+a {
+    color: wheat;
+    font-family: 'Roboto Condensed', sans-serif;
+}
