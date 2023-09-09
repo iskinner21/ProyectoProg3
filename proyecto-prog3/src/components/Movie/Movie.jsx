@@ -52,7 +52,7 @@ class Movie extends Component {
             </section>
             <br></br>
             <div className='padreBoton'>
-                    <Link to='/VerTodasPop' className='boton'> <button><p>View All Popular Movies</p></button></Link>
+                    <Link to='/VerTodasPop' className='boton'> <button><p>View All </p></button></Link>
             </div>
             <br></br>
             <h1>Top Rated Movies</h1>
@@ -63,7 +63,7 @@ class Movie extends Component {
             </section>
             <br></br>
             <div className='padreBoton'>
-                <Link to='/VerTodasTop' className='boton'> <button><p>View All Top Rated Movies</p></button></Link>
+                <Link to='/VerTodasTop' className='boton'> <button><p>View All </p></button></Link>
             </div>
             </>
 

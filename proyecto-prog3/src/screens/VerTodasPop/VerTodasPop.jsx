@@ -1,5 +1,6 @@
 import React from 'react'
-import Movie from '../../components/Movie/Movie';
+import ViewAllPop from '../../components/ViewAllPop/ViewAllPop';
+import ViewAll from '../../components/ViewAllPop/ViewAllPop';
 import './verTodasPop.css'
 
 let urlpopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=5ebefc19996563757d8045ae273d5a4b&language=en-US&page=1"
@@ -8,7 +9,7 @@ let urlpopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=5ebef
 function VerTodasPop(){
     return(
         //Faltaria el componente de buscador//
-        <Movie/>//Cambiar esto
+        <ViewAllPop/>
     )
 }
 

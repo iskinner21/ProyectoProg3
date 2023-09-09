@@ -1,5 +1,6 @@
 main {
     background-image: url(../../assets/Background.jpeg);
+    background-size: cover;
 }
 
 section {
@@ -13,8 +14,12 @@ h2 {
     color: lightgoldenrodyellow;
 }
 
+h3 {
+    color: rgb(255, 255, 255);
+}
+
 h1 {
-    color: peru;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 

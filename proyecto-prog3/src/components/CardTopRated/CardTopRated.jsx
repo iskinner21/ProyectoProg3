@@ -79,13 +79,17 @@ render() {
         <>
         <div className="padre">
             <article>
-                <h2>{this.props.dataTop.title}</h2>
+                <h3>{this.props.dataTop.title}</h3>
+                <br></br>
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.dataTop.poster_path}`} alt='img'/>
                 <br></br>
-                <Link to = {`/movies/detalle/id/${this.props.dataTop.id}`}><button><p>Ir a detalle</p></button></Link>
+                <br></br>
+                <Link to = {`/movies/detalle/id/${this.props.dataTop.id}`}><button className="botonDetalle"><p>Ir a detalle</p></button></Link>
+                <br></br>
                 <br></br>
                 <a className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</a>
                 <p className={this.state.clase}>{this.props.dataTop.overview}</p>
+                <br></br>
                 <br></br>
                 {
                     this.state.esFavorito ?

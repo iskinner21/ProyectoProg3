@@ -29,7 +29,8 @@ p.mostrar {
 }
 
 .descripcion {
-    color: brown;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
 }
 
 .detalleHome {
@@ -95,3 +96,4 @@ a {
     }
 
 }
+

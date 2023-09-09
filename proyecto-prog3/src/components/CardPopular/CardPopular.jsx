@@ -80,13 +80,17 @@ render() {
         <>
         <div className="padre">
             <article>
-                <h2>{this.props.dataPop.title}</h2>
+                <h3>{this.props.dataPop.title}</h3>
+                <br></br>
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.dataPop.poster_path}`} alt='img'/>
+                <br></br>
                 <br></br>
                 <Link className="detalleHome" to = {`/movies/detalle/id/${this.props.dataPop.id}`}><button><p>Ir a detalle</p></button></Link>
                 <br></br>
+                <br></br>
                 <a className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</a>
                 <p className={this.state.clase}>{this.props.dataPop.overview}</p>
+                <br></br>
                 <br></br>
                 {
                     this.state.esFavorito ?
