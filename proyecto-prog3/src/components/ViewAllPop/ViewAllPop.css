@@ -1,0 +1,14 @@
+.padreBoton {
+    display: flex;
+    justify-content: center;
+
+}
+
+.boton {
+    align-items: center;
+}
+.filtrador{
+        display: flex;
+        justify-content: center;
+        padding: 50px; 
+}

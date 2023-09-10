@@ -46,9 +46,18 @@ class Movie extends Component {
             <>
             <h1>Most Popular Movies</h1>
             <section className='contenedorPadre'>
-                    {
-                        this.state.popularArray.map((unaPelicula, idx) => <CardPopular key={unaPelicula.name + idx} dataPop={unaPelicula} />)
-                    }
+
+                {
+                   this.state.popularArray.length === 0 ?
+                    <div>
+                        <img src="/img/GifCargando.gif" alt="gif cargando"/>
+                        <p>Cargando</p>
+                    </div>
+                 :
+                 this.state.popularArray.map((unaPelicula, idx) => <CardPopular key={unaPelicula.name + idx} dataPop={unaPelicula} />)
+
+                }
+                    
             </section>
             <br></br>
             <div className='padreBoton'>
@@ -58,6 +67,12 @@ class Movie extends Component {
             <h1>Top Rated Movies</h1>
             <section className='contenedorPadre'>
                     {
+                        this.state.topArray.length === 0 ?
+                        <div>
+                            <img src="/img/GifCargando.gif" alt="gif cargando"/>
+                            <p>Cargando</p>
+                        </div>
+                     :
                         this.state.topArray.map((unaPelicula, idx) => <CardTopRated key={unaPelicula.name + idx} dataTop={unaPelicula} />)
                     }
             </section>

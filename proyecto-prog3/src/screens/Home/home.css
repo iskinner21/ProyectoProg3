@@ -1,5 +1,5 @@
 main {
-    background-image: url(../../assets/Background.jpeg);
+    background-image: url(../../../public/img/Background.jpeg);
     background-size: cover;
 }
 
@@ -41,6 +41,6 @@ img {
 }
 
 button {
-    background-image: url(../../assets/Background.jpeg);
+    background-image: url(../../../public/img/Background.jpeg);
     color: white;
 }
