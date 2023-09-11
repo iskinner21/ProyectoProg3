@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Form extends Component{
+class FormPop extends Component{
     constructor(props){
         super(props);
         this.state={
@@ -14,7 +14,7 @@ class Form extends Component{
     }
 
     
-    getData(e){
+    getDataPop(e){
         this.setState({
           value: e.target.value,  
         },()=>this.props.filtradorPop(this.state.value))
@@ -24,11 +24,12 @@ class Form extends Component{
     render(){
         return(
             <form onSubmit={(e)=>this.preventDefault(e)}>
-                <input onChange={(e)=>this.getData(e)} type="text" name="usuario" value={this.state.value} />
+                <input onChange={(e)=>this.getDataPop(e)} type="text" name="usuario" value={this.state.value} />
         
             </form>)
+
 
         }
 }
 
-export default Form;
+export default FormPop;

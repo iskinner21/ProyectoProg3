@@ -1,7 +1,6 @@
 import React, { Component } from "react"
-import Form from "../../components/Form/Form"
+import FormPop from "../Form/FormPop"
 import CardPopular from "../CardPopular/CardPopular"
-
 import './ViewAllPop.css'
 
 let urlPopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=5ebefc19996563757d8045ae273d5a4b&language=en-US&page=1";
@@ -65,7 +64,7 @@ render() {
         return (
             <React.Fragment>
                 <div className="filtrador">
-                <Form filtradorPop= {(filtro)=> this.filtradorPop(filtro)} />
+                <FormPop filtradorPop= {(filtro)=> this.filtradorPop(filtro)} />
                 </div>
                 <div>
                     <h1>All Popular Movies</h1>

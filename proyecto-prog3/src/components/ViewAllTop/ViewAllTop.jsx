@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import CardTopRated from '../CardTopRated/CardTopRated'
-import Form from "../../components/Form/Form"
+import FormTop from "../Form/FormTop"
 import "./ViewAllTop.css"
 
 
 
 
-let urlTopMovies = "https://api.themoviedb.org/3/movie/top_rated?api_key=5ebefc19996563757d8045ae273d5a4b";
+let urlTopMovies = "https://api.themoviedb.org/3/movie/top_rated?api_key=5ebefc19996563757d8045ae273d5a4b&language=en-US&page=1";
 
 class ViewAllTop extends Component {
 
@@ -66,7 +66,7 @@ render() {
         return (
             <React.Fragment>
                 <div className="filtrador">
-                <Form filtradorTop= {(filtro)=> this.filtradorTop(filtro)} />
+                <FormTop filtradorTop= {(filtro)=> this.filtradorTop(filtro)} />
                 </div>
                 <div>
                     <h1>All Top Rated Movies</h1>
