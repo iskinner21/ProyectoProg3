@@ -21,16 +21,24 @@ img {
 
 p.ocultar {
     display: none;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
 }
 
 p.mostrar {
     display: block;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
 
 }
 
 .descripcion {
     color: rgb(255, 255, 255);
     font-weight:bold;
+}
+
+.this.state.clase{
+    color: rgb(255, 255, 255);
 }
 
 .detalleHome {

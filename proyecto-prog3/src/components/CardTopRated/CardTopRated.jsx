@@ -89,6 +89,7 @@ render() {
                 <br></br>
                 <a className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</a>
                 <p className={this.state.clase}>{this.props.dataTop.overview}</p>
+                
                 <br></br>
                 <br></br>
                 {

@@ -85,7 +85,9 @@ render() {
 
                }
            </section>
-           <button className="padreBoton" onClick={()=>this.cargar()}><p>Cargar Mas</p></button>
+           <div className="boton">
+               <button onClick={()=>this.cargar()}><h2>Cargar Mas</h2></button>
+            </div>
            
            </React.Fragment>
         )

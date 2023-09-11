@@ -22,10 +22,14 @@ img {
 
 p.ocultar {
     display: none;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
 }
 
 p.mostrar {
     display: block;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
 
 }
 

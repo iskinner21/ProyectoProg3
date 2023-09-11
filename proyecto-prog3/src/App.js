@@ -7,6 +7,7 @@ import NotFound from './components/NotFound/NotFound';
 import Home from './screens/Home/Home';
 import VerTodasPop from './screens/VerTodasPop/VerTodasPop';
 import VerTodasTop from './screens/VerTodasTop/VerTodasTop';
+import Favoritos from './screens/Favoritos/Favoritos';
 
 
 
@@ -17,14 +18,13 @@ function App() {
       <Header />
       <main>
         <Switch>
-         <Route exact path="/" component={Home} />
-         <Route exact path="/VerTodasPop" component={VerTodasPop} />
-         <Route exact path='/VerTodasTop' component={VerTodasTop} />
+         <Route exact={true} path="/" component={Home} />
+         <Route  path="/VerTodasPop" component={VerTodasPop} />
+         <Route  path='/VerTodasTop' component={VerTodasTop} />
+         <Route  path='/Favoritos' component={Favoritos}/>
          <Route component={NotFound} />
         </Switch>
       </main>
-
-
       <Footer />
     </div>
   );

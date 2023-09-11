@@ -11,7 +11,7 @@ import '../Header/header.css'
                 <Link to = '/'><img className='logo' src='/img/VIMoviesLogo.jpg' alt='img'/></Link> 
                     <ul>
                         <li> <Link exact={true} to = "/">Home</Link></li>
-                        <li><Link to="/favorites"> Favorites </Link> </li>
+                        <li><Link to="/Favoritos"> Favorites </Link> </li>
                         <li> <Link exact={true} to = "/VerTodasPop">View All Popular</Link></li>
                         <li> <Link exact={true} to = "/VerTodasTop">View All Top Rated</Link></li>
                     </ul>

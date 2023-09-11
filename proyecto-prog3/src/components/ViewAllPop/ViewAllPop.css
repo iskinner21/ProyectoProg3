@@ -5,7 +5,7 @@
 }
 
 .boton {
-    align-items: center;
+    text-align: center;
 }
 .filtrador{
         display: flex;

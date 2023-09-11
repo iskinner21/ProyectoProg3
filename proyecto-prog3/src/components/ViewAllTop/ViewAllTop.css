@@ -3,6 +3,10 @@
     justify-content: center;
 }
 
+.boton {
+    text-align: center;
+}
+
 .filtrador{
         display: flex;
         justify-content: center;

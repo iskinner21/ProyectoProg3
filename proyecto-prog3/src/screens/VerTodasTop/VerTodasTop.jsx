@@ -1,5 +1,4 @@
 import React from 'react'
-import Movie from '../../components/Movie/Movie';
 import ViewAllTop from '../../components/ViewAllTop/ViewAllTop';
 import './verTodasTop.css'
 
