@@ -17,7 +17,7 @@ class CardTopRated extends Component {
         let storageAArray = JSON.parse(storage)
 
         if(storageAArray !== null){
-            let estaEnElArray = storageAArray.includes(this.props.datosPelicula.id)
+            let estaEnElArray = storageAArray.includes(this.props.dataTop.id)
             if(estaEnElArray){
                 this.setState({
                     esFavorito:true
@@ -95,11 +95,11 @@ render() {
                 {
                     this.state.esFavorito ?
 
-                    <button onClick={()=> this.sacarFav(this.props.datosPelicula.id)}><p>Eliminar de Favoritos</p></button>
+                    <button onClick={()=> this.sacarFav(this.props.dataTop.id)}><p>Eliminar de Favoritos</p></button>
 
                     :
 
-                    <button onClick={()=> this.agregarFav(this.props.datosPelicula.id)}><p>Agregar a favoritos</p></button>
+                    <button onClick={()=> this.agregarFav(this.props.dataTop.id)}><p>Agregar a favoritos</p></button>
 
                 }
             </article>
