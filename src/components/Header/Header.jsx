@@ -10,10 +10,10 @@ import '../Header/header.css'
             <header className='navbar'>
                 <Link to = '/'><img className='logo' src='/img/VIMoviesLogo.jpg' alt='img'/></Link> 
                     <ul>
-                        <li> <Link exact={true} to = "/">Home</Link></li>
+                        <li> <Link  to = "/">Home</Link></li>
                         <li><Link to="/Favoritos"> Favorites </Link> </li>
-                        <li> <Link exact={true} to = "/VerTodasPop">View All Popular</Link></li>
-                        <li> <Link exact={true} to = "/VerTodasTop">View All Top Rated</Link></li>
+                        <li> <Link to = "/VerTodasPop">View All Popular</Link></li>
+                        <li> <Link to = "/VerTodasTop">View All Top Rated</Link></li>
                     </ul>
             </header>
         )
