@@ -25,9 +25,10 @@ class ViewAllTop extends Component {
         fetch(urlTopMovies)
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 this.setState({
-                popularArray: data.results,
-                popularArrayFiltrado: data.results,
+                topArray: data.results,
+                topArrayFiltrado: data.results,
                 paginaSiguiente: data.page
                 })
             }
