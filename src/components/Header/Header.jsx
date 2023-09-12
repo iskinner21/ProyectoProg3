@@ -12,8 +12,8 @@ import '../Header/header.css'
                     <ul>
                         <li> <Link  to = "/">Home</Link></li>
                         <li><Link to="/Favoritos"> Favorites </Link> </li>
-                        <li> <Link  to = "/VerTodasPop">View All Popular</Link></li>
-                        <li> <Link  to = "/VerTodasTop">View All Top Rated</Link></li>
+                        <li> <Link to = "/VerTodasPop">View All Popular</Link></li>
+                        <li> <Link to = "/VerTodasTop">View All Top Rated</Link></li>
                     </ul>
             </header>
         )
