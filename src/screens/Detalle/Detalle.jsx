@@ -15,7 +15,6 @@ class Detalle extends Component{
         }
     }
  
-
     componentDidMount(){
 
         fetch(`https://api.themoviedb.org/3/movie/${this.state.id}?api_key=5ebefc19996563757d8045ae273d5a4b`

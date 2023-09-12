@@ -4,6 +4,7 @@ import CardPopular from "../CardPopular/CardPopular"
 import CardTopRated from '../CardTopRated/CardTopRated'
 import { Link } from 'react-router-dom';
 import './movie.css'
+import Buscador from "../Buscador/Buscador";
 
 let urlPopularMovies = "https://api.themoviedb.org/3/movie/popular?api_key=5ebefc19996563757d8045ae273d5a4b&language=en-US&page=1";
 let urlTopRatedMovies = "https://api.themoviedb.org/3/movie/top_rated?api_key=5ebefc19996563757d8045ae273d5a4b&language=en-US&page=1";
@@ -44,6 +45,7 @@ class Movie extends Component {
     render() {
         return (
             <>
+            <Buscador/>
             <h1>Most Popular Movies</h1>
             <section className='contenedorPadre'>
 
@@ -81,12 +83,6 @@ class Movie extends Component {
                 <Link to='/VerTodasTop' className='boton'> <button><p>View All </p></button></Link>
             </div>
             </>
-
-
-
-
-
-
         )
     }
 

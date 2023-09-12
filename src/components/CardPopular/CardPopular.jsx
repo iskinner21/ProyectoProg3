@@ -88,17 +88,15 @@ render() {
                 <Link className="detalleHome" to = {`/movies/detalle/id/${this.props.dataPop.id}`}><button><p>Ir a detalle</p></button></Link>
                 <br></br>
                 <br></br>
-                <a className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</a>
+                <button className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</button>
                 <p className={this.state.clase}>{this.props.dataPop.overview}</p>
                 <br></br>
                 <br></br>
                 {
-                    this.state.esFavorito ?
-
+                    this.state.esFavorito 
+                    ?
                     <button onClick={()=> this.sacarFav(this.props.dataPop.id)}><p>Eliminar de Favoritos</p></button>
-
                     :
-
                     <button onClick={()=> this.agregarFav(this.props.dataPop.id)}><p>Agregar a favoritos</p></button>
 
                 }

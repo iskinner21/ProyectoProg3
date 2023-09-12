@@ -49,7 +49,7 @@ class Favoritos extends Component{
             <>{this.state.dataFav.map((unaPelicula, idx) => <CardPopular key={unaPelicula.name + idx} dataPop={unaPelicula} />)}</>
 
                 :
-                <h4>No hay favoritos</h4>
+                <h2>No hay favoritos</h2>
             }
             
             </>
