@@ -10,14 +10,13 @@ img {
     height: 190px;
 }
 
-.nc {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .padre {
     text-align: center;
-
+    display: flex;
+    flex-wrap: wrap;
+    flex: 150px;
 }
 
 p.ocultar {

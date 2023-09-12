@@ -64,6 +64,7 @@ filtradorPop(filtro){
 render() {
         return (
             <React.Fragment>
+                
                 <div className="filtrador">
                 <FormPop filtradorPop= {(filtro)=> this.filtradorPop(filtro)} />
                 </div>
@@ -88,6 +89,7 @@ render() {
                <button onClick={()=>this.cargar()}><h2>Cargar Mas</h2></button>
             </div>
            
+                
            
            </React.Fragment>
         )
