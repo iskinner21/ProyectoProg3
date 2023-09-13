@@ -5,10 +5,19 @@
 
 .boton {
     text-align: center;
+    background-color: black;
 }
 
 .filtrador{
         display: flex;
         justify-content: center;
         padding: 50px; 
+}
+
+.black{
+    background-color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: aliceblue;
+    border: none;
 }

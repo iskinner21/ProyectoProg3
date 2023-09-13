@@ -42,11 +42,14 @@ class Detalle extends Component{
                 <p>Duracion: {this.state.pelicula.runtime} minutos</p>
                 <p>Sinopsis: {this.state.pelicula.overview}</p>
             </article>
-            <Link to='/' className='boton'> <button><p>Volver a Home</p></button></Link>
+            <Link to='/'> <button className="boton"><p>Volver a Home</p></button></Link>
         </div> 
         )
     }
 }
+
+//  <ul>Generos: {this.state.genres.map((genero, idx) => <li key={genero.name + idx}>{genero.name}</li>)}</ul>
+
 
 
 export default Detalle

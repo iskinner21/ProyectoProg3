@@ -24,7 +24,7 @@ class FormPop extends Component{
     render(){
         return(
             <form onSubmit={(e)=>this.preventDefault(e)}>
-                <input onChange={(e)=>this.getDataPop(e)} type="text" name="usuario" value={this.state.value} />
+                <input onChange={(e)=>this.getDataPop(e)} type='text' placeholder='¿Que estas buscando?' name="usuario" value={this.state.value} />
         
             </form>)
 

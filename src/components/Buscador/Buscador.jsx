@@ -2,8 +2,8 @@ import React, { Component, Link } from "react";
 
 class Buscador extends Component{
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state ={
             input:''
         }

@@ -86,7 +86,7 @@ render() {
                }
            </section>
            <div className="boton">
-               <button onClick={()=>this.cargar()}><h2>Cargar Mas</h2></button>
+               <button className="black" onClick={()=>this.cargar()}><h2>Cargar Mas</h2></button>
             </div>
            
                 

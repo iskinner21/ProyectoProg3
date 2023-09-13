@@ -84,7 +84,7 @@ render() {
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.dataTop.poster_path}`} alt='img'/>
                 <br></br>
                 <br></br>
-                <Link to = {`/movies/detalle/id/${this.props.dataTop.id}`}><button className="botonDetalle"><p>Ir a detalle</p></button></Link>
+                <Link to = {`/movies/detalle/id/${this.props.dataTop.id}`}><button className="detalleHome"><p>Ir a detalle</p></button></Link>
                 <br></br>
                 <br></br>
                 <button className="descripcion" onClick={() => this.cambiarTexto()}>{this.state.descripcion}</button>
@@ -95,10 +95,9 @@ render() {
                 {
                     this.state.esFavorito 
                     ?
-                    <button onClick={()=> this.sacarFav(this.props.dataTop.id)}><p>Eliminar de Favoritos</p></button>
+                    <button className="borrar" onClick={()=> this.sacarFav(this.props.dataTop.id)}><p>Eliminar de Favoritos</p></button>
                     :
-                    <button onClick={()=> this.agregarFav(this.props.dataTop.id)}><p>Agregar a favoritos</p></button>
-
+                    <button className="add" onClick={()=> this.agregarFav(this.props.dataTop.id)}><p>Agregar a favoritos</p></button>
                 }
             </article>
         </div>

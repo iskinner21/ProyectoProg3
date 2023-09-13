@@ -45,7 +45,7 @@ class Movie extends Component {
     render() {
         return (
             <>
-            <Buscador/>
+            <Buscador filtrado= ''/>
             <h1>Most Popular Movies</h1>
             <section className='contenedorPadre'>
 
@@ -63,7 +63,7 @@ class Movie extends Component {
             </section>
             <br></br>
             <div className='padreBoton'>
-                    <Link to='/VerTodasPop' className='boton'> <button><p>View All </p></button></Link>
+                    <Link to='/VerTodasPop' > <button className='boton'><p>View All </p></button></Link>
             </div>
             <br></br>
             <h1>Top Rated Movies</h1>
@@ -80,7 +80,7 @@ class Movie extends Component {
             </section>
             <br></br>
             <div className='padreBoton'>
-                <Link to='/VerTodasTop' className='boton'> <button><p>View All </p></button></Link>
+                <Link to='/VerTodasTop'> <button className='boton'><p>View All </p></button></Link>
             </div>
             </>
         )
