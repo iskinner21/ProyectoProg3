@@ -7,3 +7,22 @@ color: white;
     padding-right: 10px;
     background-color: rgba(255, 255, 255, 0.112);
 }
+.add{
+    cursor: pointer;
+    background-color: goldenrod;
+    border-radius: 10px;
+    text-decoration: aliceblue;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.borrar {
+    cursor: pointer;
+    background-color: rgba(251, 97, 97, 0.528);
+    border-radius: 10px;
+    text-decoration: aliceblue;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}

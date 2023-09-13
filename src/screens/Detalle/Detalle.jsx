@@ -29,19 +29,76 @@ class Detalle extends Component{
             .catch()
     }
 
+    agregarFav(id){
+        let storage = localStorage.getItem('favoritos')
+        
+        if(storage === null){
+          let idEnArray = [id]
+          let arrayAString = JSON.stringify(idEnArray)
+          localStorage.setItem('favoritos', arrayAString)
+        }
+        
+        else {
+          let deStringAArray = JSON.parse(storage)
+          deStringAArray.push(id)
+          let arrayAString = JSON.stringify(deStringAArray)
+          localStorage.setItem('favoritos', arrayAString)
+        }
+        this.setState({
+            esFavorito: true
+        })
+    }
+
+    sacarFav(id){
+       let storage = localStorage.getItem('favoritos')
+       let storageAArray = JSON.parse(storage)
+       let filtro = storageAArray.filter((elm)=> elm !== id)
+       let filtroAString = JSON.stringify(filtro)
+       localStorage.setItem('favoritos', filtroAString)
+
+
+       this.setState({
+        esFavorito:false
+       })
+
+    }
+
     render(){
         console.log(this.state)
         return(
             <div className="padre">
             <article>
-                <h3>{this.state.pelicula.title}</h3>
-                <br></br>
-                <img src={`https://image.tmdb.org/t/p/w342/${this.state.pelicula.poster_path}`} alt='img'/>
-                <p>Rating: {this.state.pelicula.vote_average}</p>
-                <p>Fecha de estreno: {this.state.pelicula.release_date}</p>
-                <p>Duracion: {this.state.pelicula.runtime} minutos</p>
-                <p>Sinopsis: {this.state.pelicula.overview}</p>
+            {
+                        this.state.pelicula.length === 0 ?
+                        <div>
+                            <img src="/img/GifCargando.gif" alt="gif cargando"/>
+                            <p>Cargando</p>
+                        </div>
+                     :
+                     
+                     <React.Fragment>
+                        <h3>{this.state.pelicula.title}</h3>
+                        <br></br>
+                        <img src={`https://image.tmdb.org/t/p/w342/${this.state.pelicula.poster_path}`} alt='img'/>
+                        <p>Rating: {this.state.pelicula.vote_average}</p>
+                        <p>Fecha de estreno: {this.state.pelicula.release_date}</p>
+                        <p>Duracion: {this.state.pelicula.runtime} minutos</p>
+                        <p>Sinopsis: {this.state.pelicula.overview}</p>
+                     </React.Fragment>
+                    }
+                
+
+                {
+                    this.state.esFavorito 
+                    ?
+                    <button className="borrar" onClick={()=> this.sacarFav(this.state.id)}><p>Eliminar de Favoritos</p></button>
+                    :
+                    <button className="add" onClick={()=> this.agregarFav(this.state.id)}><p>Agregar a favoritos</p></button>
+
+                }
             </article>
+            <br></br>
+
             <Link to='/'> <button className="boton"><p>Volver a Home</p></button></Link>
         </div> 
         )
