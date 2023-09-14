@@ -15,7 +15,7 @@ class Movie extends Component {
         super()
         this.state = {
             popularArray: [],
-            topArray: []
+            topArray: [],
         }
     }
 
@@ -40,12 +40,20 @@ class Movie extends Component {
             }))
             .catch()
 
+
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=5ebefc19996563757d8045ae273d5a4b`)
+        .then(res => res.json())
+        .then(data => this.setState({
+            todo: data.results
+        }))
+        .catch()
+
     }
 
     render() {
         return (
             <>
-            <Buscador filtrado= ''/>
+            <Buscador filtrado= {(filtro)=> this.filtrado(filtro)}/>
             <h1>Most Popular Movies</h1>
             <section className='contenedorPadre'>
 

@@ -24,7 +24,6 @@ class FormTop extends Component{
         return(
             <form onSubmit={(e)=>this.preventDefault(e)}>
                 <input onChange={(e)=>this.getDataTop(e)} type='text' placeholder='¿Que estas buscando?' name="usuario" value={this.state.value} />
-        
             </form>)
 
 

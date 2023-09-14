@@ -1,4 +1,5 @@
 import React, { Component, Link } from "react";
+import './buscador.css'
 
 class Buscador extends Component{
 
@@ -19,13 +20,13 @@ class Buscador extends Component{
         this.setState({
             input: filtro.target.value
         }, () => this.props.filtrado(this.state.input))
-
         console.log(this.state.input)
     };
 
     render() {
         return (
             <React.Fragment>
+                <div className="form">
                 <form action='' onSubmit={(e) => this.preventDefault(e)}>
                     <input type='text' placeholder='¿Que estas buscando?' onChange={(e) => this.filter(e)} value={this.state.input} />
                     {
@@ -37,6 +38,8 @@ class Buscador extends Component{
                             <input type='submit' value='submit' />
                     }
                 </form>
+                </div>
+                
             </React.Fragment>
         )
 

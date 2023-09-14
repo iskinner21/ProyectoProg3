@@ -9,6 +9,7 @@ import VerTodasPop from './screens/VerTodasPop/VerTodasPop';
 import VerTodasTop from './screens/VerTodasTop/VerTodasTop';
 import Favoritos from './screens/Favoritos/Favoritos';
 import Detalle from './screens/Detalle/Detalle';
+import Resultados from './screens/Resultados/Resultados';
 
 
 
@@ -24,6 +25,7 @@ function App() {
          <Route  path='/VerTodasTop' component={VerTodasTop} />
          <Route  path='/Favoritos' component={Favoritos}/>
          <Route  path='/movies/detalle/id/:id' component={Detalle}/>
+         <Route  path='/resultados/:title' component={Resultados}/>
          <Route component={NotFound} />
         </Switch>
       </main>
