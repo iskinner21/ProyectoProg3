@@ -10,32 +10,31 @@ class Buscador extends Component{
         }
     }
     // prevenir reload del estado al submitear el formulario
-    controlarEnvio(event){
+    preventDefault(event){
         event.preventDefault();
-        return true
-    }
+        }
 
     ///guardar datos del input en el estado
-    filter(filtro) {
+
+    filter(e){
         this.setState({
-            input: filtro.target.value
-        }, () => this.props.filtrado(this.state.input))
-        console.log(this.state.input)
-    };
+          input: e.target.value,  
+        },()=>this.props.filtrado(this.state.input) & console.log(this.state.input))
+    }
 
     render() {
         return (
             <React.Fragment>
                 <div className="form">
-                <form action='' onSubmit={(e) => this.preventDefault(e)}>
-                    <input type='text' placeholder='¿Que estas buscando?' onChange={(e) => this.filter(e)} value={this.state.input} />
+                <form onSubmit={(e) => this.preventDefault(e)}>
+                    <input  onChange={(e) => this.filter(e)} value={this.state.input} type='text' placeholder='¿Que estas buscando?'/>
                     {
                         this.state.input ?
                             <Link to={`/resultados/${this.state.input}`}>
-                                <input type='submit' value='submit' />
+                                <input type='submit' />
                             </Link>
                             :
-                            <input type='submit' value='submit' />
+                            <input type='submit' />
                     }
                 </form>
                 </div>

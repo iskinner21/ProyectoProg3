@@ -16,7 +16,7 @@ class FormTop extends Component{
     getDataTop(e){
         this.setState({
           value: e.target.value,  
-        },()=>this.props.filtradorTop(this.state.value))
+        },()=>this.props.filtradorTop(this.state.value) & console.log(this.state.value))
     }
 
 

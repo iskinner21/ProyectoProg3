@@ -16,6 +16,8 @@ class Movie extends Component {
         this.state = {
             popularArray: [],
             topArray: [],
+            todo:[],
+            todoFilter:[]
         }
     }
 
@@ -24,30 +26,36 @@ class Movie extends Component {
 
         fetch(urlPopularMovies)
             .then(res => res.json())
-            .then(data => {
-                this.setState({
+            .then(data => this.setState({
                 popularArray: data.results.slice(0,4)
-                })
-            }
-        )
+                }, () => console.log(this.state.popularArray)))
             .catch()
+
 
 
         fetch(urlTopRatedMovies)
             .then(res => res.json())
             .then(data => this.setState({
                 topArray: data.results.slice(0,4)
-            }))
+            }, () => console.log(this.state.topArray)))
             .catch()
+
 
 
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=5ebefc19996563757d8045ae273d5a4b`)
         .then(res => res.json())
         .then(data => this.setState({
             todo: data.results
-        }))
+        }, () => console.log(this.state.todo)))
         .catch()
+    }
 
+    
+    filtrado(filtro){
+        let peliculasFiltradas = this.state.todo.filter(pelicula =>pelicula.title.toLowerCase().includes(filtro.toLowerCase()))
+        this.setState({
+            todoFilter: peliculasFiltradas,
+        })
     }
 
     render() {
